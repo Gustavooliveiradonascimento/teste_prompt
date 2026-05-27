@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechSchool — Aprenda as Tecnologias do Futuro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="index">
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <a href="index.html" class="nav-logo">🚀 Tech<span>School</span><span class="dot">.</span></a>
+  <nav class="nav-links">
+    <a href="#cursos" class="active">Cursos</a>
+    <a href="#por-que">Por que nós</a>
+    <a href="#depoimentos">Depoimentos</a>
+  </nav>
+  <div class="nav-actions">
+    <button class="btn btn-ghost btn-sm" onclick="window.location.href='login.html'">Entrar</button>
+    <button class="btn btn-primary btn-sm" onclick="window.location.href='cadastro.html'">Começar grátis</button>
+    <button class="btn btn-ghost btn-sm" onclick="window.location.href='dashboard.html'" title="Demo Dashboard" style="font-size:1.1rem">⚙️</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <!-- Background orbs -->
+  <div class="orb orb-purple" style="width:600px;height:600px;top:-200px;left:-200px"></div>
+  <div class="orb orb-yellow" style="width:400px;height:400px;bottom:-100px;right:10%"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <span class="pulse"></span>
+      Plataforma #1 em Tech no Brasil
+    </div>
+    <h1>
+      Aprenda as<br>
+      <span class="highlight">tecnologias</span><br>
+      do futuro
+    </h1>
+    <p class="hero-desc">
+      Do zero ao mercado global. Cursos práticos com projetos reais, mentoria ao vivo e certificado reconhecido.
+    </p>
+    <div class="hero-cta">
+      <button class="btn btn-accent btn-lg" onclick="document.getElementById('cursos').scrollIntoView({behavior:'smooth'})">
+        Ver cursos →
+      </button>
+      <button class="btn btn-ghost btn-lg" onclick="window.location.href='cadastro.html'">
+        Criar conta grátis
+      </button>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-num" data-count="12400" data-suffix="+">0+</span>
+        <span class="stat-label">Alunos formados</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" data-count="98" data-suffix="%">0%</span>
+        <span class="stat-label">Taxa de empregabilidade</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" data-count="6" data-suffix=" cursos">0</span>
+        <span class="stat-label">Trilhas disponíveis</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Code window decoration -->
+  <div class="hero-visual">
+    <div class="hero-code-window">
+      <div class="code-titlebar">
+        <span class="code-dot red"></span>
+        <span class="code-dot yellow"></span>
+        <span class="code-dot green"></span>
+        <span class="code-filename">main.js</span>
+      </div>
+      <div class="code-body">
+        <div class="code-line"><span class="code-num">1</span><span class="cm">// Seu futuro começa aqui</span></div>
+        <div class="code-line"><span class="code-num">2</span></div>
+        <div class="code-line"><span class="code-num">3</span><span class="kw">const </span><span class="fn">aprender</span> <span class="op">=</span> <span class="kw">async</span> () <span class="op">=></span> {</div>
+        <div class="code-line"><span class="code-num">4</span>&nbsp;&nbsp;<span class="kw">const </span>curso <span class="op">=</span> <span class="kw">await </span><span class="fn">escolher</span>(<span class="str">'web'</span>);</div>
+        <div class="code-line"><span class="code-num">5</span>&nbsp;&nbsp;<span class="kw">const </span>skill <span class="op">=</span> <span class="kw">await </span>curso.<span class="fn">estudar</span>();</div>
+        <div class="code-line"><span class="code-num">6</span>&nbsp;&nbsp;<span class="kw">return </span>skill.<span class="fn">aplicar</span>(<span class="str">'mercado'</span>);</div>
+        <div class="code-line"><span class="code-num">7</span>};</div>
+        <div class="code-line"><span class="code-num">8</span></div>
+        <div class="code-line"><span class="code-num">9</span><span class="fn">aprender</span>().<span class="fn">then</span>(job <span class="op">=></span> {</div>
+        <div class="code-line"><span class="code-num">10</span>&nbsp;&nbsp;console.<span class="fn">log</span>(<span class="str">`✅ ${job.title}`</span>);</div>
+        <div class="code-line"><span class="code-num">11</span>});</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COURSES SECTION -->
+<section class="section" id="cursos" style="background:var(--bg-deep)">
+  <div class="section-header">
+    <span class="section-label">📚 Trilhas de Aprendizado</span>
+    <h2 class="section-title">Nossos Cursos</h2>
+    <p class="section-sub">Escolha sua trilha e transforme sua carreira com projetos práticos e certificação.</p>
+  </div>
+
+  <div class="filter-tabs">
+    <button class="filter-tab active" data-filter="all">Todos</button>
+    <button class="filter-tab" data-filter="Básico">Básico</button>
+    <button class="filter-tab" data-filter="Intermediário">Intermediário</button>
+    <button class="filter-tab" data-filter="Avançado">Avançado</button>
+  </div>
+
+  <div class="courses-grid" id="courses-grid">
+    <!-- Rendered by JS -->
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="section" id="por-que">
+  <div class="section-header">
+    <span class="section-label">✨ Diferenciais</span>
+    <h2 class="section-title">Por que a TechSchool?</h2>
+    <p class="section-sub">Mais do que cursos — uma comunidade que acelera sua carreira.</p>
+  </div>
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">🎯</div>
+      <h3>Projetos Reais</h3>
+      <p>Construa um portfólio com projetos do mundo real que impressionam recrutadores.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🧑‍🏫</div>
+      <h3>Mentoria ao Vivo</h3>
+      <p>Sessões semanais com especialistas do setor para tirar dúvidas e orientar sua carreira.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📜</div>
+      <h3>Certificado Reconhecido</h3>
+      <p>Nosso certificado é aceito pelas maiores empresas de tecnologia do Brasil e do mundo.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">♾️</div>
+      <h3>Acesso Vitalício</h3>
+      <p>Pague uma vez e acesse para sempre. Conteúdo sempre atualizado sem custo adicional.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section" id="depoimentos" style="background:var(--bg-deep)">
+  <div class="section-header">
+    <span class="section-label">💬 Depoimentos</span>
+    <h2 class="section-title">O que nossos alunos dizem</h2>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"Em 6 meses consegui minha primeira vaga como dev júnior. O curso de Fullstack foi transformador — aprendi mais aqui do que em 2 anos de faculdade."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">👩‍💻</div>
+        <div>
+          <div class="author-name">Mariana Costa</div>
+          <div class="author-role">Dev Jr. @ Nubank</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"O curso de Cloud & IA me deu o vocabulário e as habilidades para liderar o time de infraestrutura na minha empresa. Melhor investimento da minha vida."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">👨‍🔧</div>
+        <div>
+          <div class="author-name">Felipe Andrade</div>
+          <div class="author-role">Cloud Architect @ AWS</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">★★★★★</div>
+      <p class="testimonial-text">"Fiz Data Science com Python e em 3 meses já estava aplicando machine learning nos projetos da empresa. A didática é incrível e os projetos são muito práticos."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">👩‍🔬</div>
+        <div>
+          <div class="author-name">Beatriz Rocha</div>
+          <div class="author-role">Data Scientist @ iFood</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">🚀 Tech<span>School</span></div>
+      <p class="footer-desc">Formando os desenvolvedores e designers do amanhã com educação prática, mentoria de qualidade e comunidade ativa.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Cursos</h4>
+      <a href="#">Lógica de Programação</a>
+      <a href="#">Desenvolvimento Web</a>
+      <a href="#">Arquitetura & IA</a>
+      <a href="#">Data Science</a>
+    </div>
+    <div class="footer-col">
+      <h4>Empresa</h4>
+      <a href="#">Sobre nós</a>
+      <a href="#">Blog</a>
+      <a href="#">Carreiras</a>
+      <a href="#">Parceiros</a>
+    </div>
+    <div class="footer-col">
+      <h4>Suporte</h4>
+      <a href="#">Central de ajuda</a>
+      <a href="#">Termos de uso</a>
+      <a href="#">Privacidade</a>
+      <a href="login.html">Login</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 TechSchool. Todos os direitos reservados.</p>
+    <p style="color:var(--text-muted)">Feito com ❤️ no Brasil</p>
+  </div>
+</footer>
+
+<!-- COURSE MODAL -->
+<div class="modal-overlay" id="course-modal-overlay">
+  <div class="modal">
+    <h2 id="modal-title">Nome do Curso</h2>
+    <p id="modal-desc">Descrição do curso.</p>
+    <div style="display:flex;gap:24px;margin:20px 0;font-size:0.88rem;color:var(--text-muted)">
+      <span>👥 <span id="modal-students"></span></span>
+      <span>⏱ <span id="modal-hours"></span></span>
+    </div>
+    <div style="font-family:var(--font-display);font-size:2rem;font-weight:800;color:var(--accent);margin-bottom:20px" id="modal-price"></div>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" onclick="closeModal()">Fechar</button>
+      <button class="btn btn-primary" id="modal-buy-btn">Garantir Vaga 🚀</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST CONTAINER -->
+<div class="toast-container" id="toast-container"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
